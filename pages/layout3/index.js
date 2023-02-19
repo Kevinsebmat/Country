@@ -18,7 +18,7 @@ export async function getServerSideProps() {
 
 const Countries = ({ data }) => {
   return (
-    <div className={"px-4 py-5 flex flex-col"}>
+    <div className={"px-9 py-6 flex flex-col"}>
                  <MyButton href="/" appendClass="animate-bounceLight">Home</MyButton>
 
       <div className="grid grid-cols-3 gap-6">
@@ -53,10 +53,7 @@ const Countries = ({ data }) => {
                   return <div key={language.code}> {language.name} </div>;
                 })}{" "}
               </Typography>{" "}
-              {/* <Typography variant="small" color="gray" className="flex gap-1">
-                                                                                                <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
-                                                                                                Barcelona, Spain{" "}
-                                                                                              </Typography>{" "} */}{" "}
+            {" "}
             </CardFooter>{" "}
           </Card>
         ))}{" "}
