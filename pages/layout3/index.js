@@ -1,7 +1,8 @@
-
-import {getAllCountries} from "@/lib/CountriesService";
 import Link from "next/link";
-import MyButton from "@/components/MyButton"
+import { getAllCountries } from "@/lib/CountriesService";
+import Image from "next/image";
+import MyButton from "@/components/MyButton";
+
 import {
   Card,
   CardHeader,
@@ -9,24 +10,24 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
-import Image from "next/image";
 
-
-
-export async function getServerSideProps (context) {
-    const countries = await getAllCountries()
-    const country = countries.find(item => item.code === context.params.code)
-    return {props:{data:country}}
+export async function getServerSideProps() {
+  const countries = await getAllCountries();
+  return { props: { data: countries } };
 }
- 
-const Country = ({data}) => {
-    return (
-       <div class="grid h-screen place-items-center">
 
-       <Card key={data.name} className="w-96 bg-gray-100 shadow-2xl">
+const Countries = ({ data }) => {
+  return (
+    <div className={"px-4 py-5 flex flex-col"}>
+                 <MyButton href="/" appendClass="animate-bounceLight">Home</MyButton>
+
+      <div className="grid grid-cols-3 gap-6">
+        {" "}
+        {data.map((country) => (
+          <Card key={country.name} className="w-96 bg-gray-100 shadow-2xl">
             <CardHeader color="blue" className="relative h-56">
-            <Image
-                src={`https://countryflagsapi.com/png/${data.code}`}
+              <Image
+                src={`https://countryflagsapi.com/png/${country.code}`}
                 alt="img-blur-shadow"
                 width={800}
                 height={500}
@@ -36,7 +37,7 @@ const Country = ({data}) => {
               <Typography variant="h5" className="mb-2">
                 {" "}
               </Typography>{" "}
-              <Typography> {data.name} {data.emoji}{" "} </Typography>{" "}
+              <Typography> {country.name} {country.emoji}{" "} </Typography>{" "}
             </CardBody>{" "}
             <CardFooter
               divider
@@ -48,7 +49,7 @@ const Country = ({data}) => {
               </Typography>{" "}
               <Typography variant="small">
                 {" "}
-                {data.languages.map((language) => {
+                {country.languages.map((language) => {
                   return <div key={language.code}> {language.name} </div>;
                 })}{" "}
               </Typography>{" "}
@@ -58,8 +59,10 @@ const Country = ({data}) => {
                                                                                               </Typography>{" "} */}{" "}
             </CardFooter>{" "}
           </Card>
-          </div>
-    )
-}
+        ))}{" "}
+      </div>{" "}
+    </div>
+  );
+};
 
-export default Country
+export default Countries;

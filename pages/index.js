@@ -21,9 +21,9 @@ export default function Home() {
             </h1>
             <p className="mt-5 text-center text-lg text-white opacity-90">Explore the world with us...</p>
 
-            <HeroButton href="/continents" appendClass="animate-bounceLight">All Continents</HeroButton>
-            <HeroButton href="/countries" appendClass="animate-bounceLight">All Countries</HeroButton>
+            <HeroButton href="/layout1" appendClass="animate-bounceLight">Layout 1</HeroButton>
             <HeroButton href="/layout2" appendClass="animate-bounceLight">Layout 2</HeroButton>
+            <HeroButton href="/layout3" appendClass="animate-bounceLight">Layout 3</HeroButton>
 
         </div>
 

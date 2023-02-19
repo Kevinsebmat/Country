@@ -23,7 +23,7 @@ const Continents = ({data}) => {
                 {data.map((continent) => (
                     <tr key={continent.code}>
                         <td>
-                            <Link href={`/continents/${encodeURIComponent(continent.code)}`}>
+                            <Link href={`/layout1/${encodeURIComponent(continent.code)}`}>
                             {continent.name}
                         </Link>
                         </td>
