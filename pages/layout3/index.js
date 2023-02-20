@@ -19,8 +19,6 @@ export async function getServerSideProps() {
 const Countries = ({ data }) => {
   return (
     <div className={"px-9 py-6 flex flex-col"}>
-                 <MyButton href="/" appendClass="animate-bounceLight">Home</MyButton>
-
       <div className="grid grid-cols-3 gap-6">
         {" "}
         {data.map((country) => (

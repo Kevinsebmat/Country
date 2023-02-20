@@ -13,7 +13,6 @@ const Countries = ({data}) => {
     return (
         <div className={'px-4 py-5 flex flex-col bg-gray-400'}>
         <div>
-        <MyButton href="/" appendClass="animate-bounceLight">Home</MyButton>
         </div>
         <div> </div>
             <table>
@@ -24,7 +23,7 @@ const Countries = ({data}) => {
                 </thead>
                 <tbody>
                 {data.map((country) => (
-                    <tr class="even:bg-amber-9 odd:bg-blue-100" key={country.code}>
+                    <tr class="even:bg-amber-9 odd:bg-blue-200" key={country.code}>
                         <td>
                             <Link href={`/layout2/${encodeURIComponent(country.code)}`} class="px-2 py-0 text-blue-100 no-underline bg-blue-500 rounded hover:bg-blue-600 hover:underline hover:text-blue-200">
 
