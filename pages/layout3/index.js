@@ -20,7 +20,7 @@ const Countries = ({ data }) => {
   return (
     <div className={"px-9 py-6 flex flex-col"}>
       <div className="grid grid-cols-3 gap-6">
-        {" "}
+        
         {data.map((country) => (
           <Card key={country.name} className="w-96 bg-gray-100 shadow-2xl">
             <CardHeader color="blue" className="relative h-56">
@@ -29,33 +29,30 @@ const Countries = ({ data }) => {
                 alt="img-blur-shadow"
                 width={800}
                 height={500}
-              />{" "}
-            </CardHeader>{" "}
+              />
+            </CardHeader>
             <CardBody className="text-center">
-              <Typography variant="h5" className="mb-2">
-                {" "}
-              </Typography>{" "}
-              <Typography> {country.name} {country.emoji}{" "} </Typography>{" "}
-            </CardBody>{" "}
+              <div> {country.name} {country.emoji} </div>
+            </CardBody>
             <CardFooter
               divider
               className="flex items-center justify-between py-3"
             >
-              <Typography variant="h1" color="blue" textGradient>
-                {" "}
-                Languages:{" "}
-              </Typography>{" "}
-              <Typography variant="small">
-                {" "}
+              <div>
+                
+                Languages:
+              </div>
+              <div>
+                
                 {country.languages.map((language) => {
-                  return <div key={language.code}> {language.name} </div>;
-                })}{" "}
-              </Typography>{" "}
-            {" "}
-            </CardFooter>{" "}
+                  return <p key={language.code}> {language.name} </p>;
+                })}
+              </div>
+            
+            </CardFooter>
           </Card>
-        ))}{" "}
-      </div>{" "}
+        ))}
+      </div>
     </div>
   );
 };

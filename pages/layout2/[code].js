@@ -31,30 +31,30 @@ const Country = ({data}) => {
                 alt="img-blur-shadow"
                 width={800}
                 height={500}
-              />{" "}
-            </CardHeader>{" "}
+              />
+            </CardHeader>
             <CardBody className="text-center">
-              <Typography variant="h5" className="mb-2">
-                {" "}
-              </Typography>{" "}
-              <Typography> {data.name} {data.emoji}{" "} </Typography>{" "}
-            </CardBody>{" "}
+              <div variant="h5" className="mb-2">
+                
+              </div>
+              <div> {data.name} {data.emoji} </div>
+            </CardBody>
             <CardFooter
               divider
               className="flex items-center justify-between py-3"
             >
-              <Typography variant="h1" color="blue" textGradient>
-                {" "}
-                Languages:{" "}
-              </Typography>{" "}
-              <Typography variant="small">
-                {" "}
+              <div variant="h1" color="blue" textGradient>
+                
+                Languages:
+              </div>
+              <div variant="small">
+                
                 {data.languages.map((language) => {
                   return <div key={language.code}> {language.name} </div>;
-                })}{" "}
-              </Typography>{" "}
-              {}{" "}
-            </CardFooter>{" "}
+                })}
+              </div>
+              {}
+            </CardFooter>
           </Card>
           </div>
     )
