@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from "next/link";
 
 function NavLink({to, children}) {
     return <a href={to} className={`mx-4`}>
@@ -15,15 +16,15 @@ function MobileNav({open, setOpen}) {
             </div>
             <div className="flex flex-col ml-4">
             
-                <a className="text-xl font-normal my-4" href="/" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                <Link className="text-xl font-normal my-4" href="/" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     HOME
-                </a> 
-                <a className="text-xl font-normal my-4" href="/layout2" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                </Link> 
+                <Link className="text-xl font-normal my-4" href="/layout2" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     LAYOUT 2
-                </a>
-                 <a className="text-xl font-normal my-4" href="/layout3" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
+                </Link>
+                 <Link className="text-xl font-normal my-4" href="/layout3" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>
                     LAYOUT 2
-                </a>
+                </Link>
             </div>  
         </div>
     )
