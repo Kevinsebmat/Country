@@ -16,12 +16,8 @@ const Countries = ({data}) => {
         </div>
         <div> </div>
             <table>
-                <thead class="bg-white border-b sticky top-0 text-left ">
-                <tr>
-                    <th>Country (Click for Details)</th>
-                </tr>
-                </thead>
                 <tbody>
+                <div className="border-b bg-white text-left">Click for Details</div>
                 {data.map((country) => (
                     <tr class="even:bg-amber-9 odd:bg-blue-200" key={country.code}>
                         <td>
