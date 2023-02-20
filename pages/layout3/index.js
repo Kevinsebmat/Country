@@ -23,7 +23,7 @@ const Countries = ({ data }) => {
         
         {data.map((country) => (
           <Card key={country.name} className="w-96 bg-gray-100 shadow-2xl">
-            <CardHeader color="blue" className="relative h-56">
+            <CardHeader className="relative h-58">
               <Image
                 src={`https://countryflagsapi.com/png/${country.code}`}
                 alt="img-blur-shadow"

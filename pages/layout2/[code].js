@@ -22,9 +22,9 @@ export async function getServerSideProps (context) {
 const Country = ({data}) => {
     return (
       
-       <div class="grid h-screen place-items-center px-4 py-5 flex flex-col bg-gray-400">
+       <div className="grid h-screen place-items-center px-4 py-5 flex flex-col bg-gray-400">
        <Card key={data.name} className="w-96 bg-gray-100 shadow-2xl">
-            <CardHeader color="blue" className="relative h-56">
+            <CardHeader className="relative h-59">
 
             <Image
                 src={`https://countryflagsapi.com/png/${data.code}`}
@@ -34,16 +34,14 @@ const Country = ({data}) => {
               />
             </CardHeader>
             <CardBody className="text-center">
-              <div variant="h5" className="mb-2">
-                
-              </div>
+              
               <div> {data.name} {data.emoji} </div>
             </CardBody>
             <CardFooter
               divider
               className="flex items-center justify-between py-3"
             >
-              <div variant="h1" color="blue" textGradient>
+              <div variant="h1" color="blue">
                 
                 Languages:
               </div>
