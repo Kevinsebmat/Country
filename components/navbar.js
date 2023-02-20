@@ -33,7 +33,7 @@ export default function Navbar() {
     
     const [open, setOpen] = useState(false)
     return (
-        <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-12 items-center">
+        <nav className="flex filter drop-shadow-md text-green-500 sm:text-red-500 lg:text-blue-500 bg-white px-4 py-4 h-12 items-center">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="h-10 ml-left"> 
                 <img className= "rounded-full border border-gray-100 shadow-sm h-full" src="/images/globe.jpg" />

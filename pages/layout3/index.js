@@ -19,7 +19,7 @@ export async function getServerSideProps() {
 const Countries = ({ data }) => {
   return (
     <div className={"px-9 py-6 flex flex-col"}>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
         
         {data.map((country) => (
           <Card key={country.name} className="w-96 bg-gray-100 shadow-2xl">

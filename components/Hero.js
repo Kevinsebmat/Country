@@ -19,7 +19,6 @@ export const Hero = () => {
                 <span className="text-green-500 sm:text-xl lg:text-blue-500">GLOBE EXPLORER</span>
             </h1>
 
-            <HeroButton href="/layout1" appendClass="animate-bounceLight">Layout 1</HeroButton>
             <HeroButton href="/layout2" appendClass="animate-bounceLight">Layout 2</HeroButton>
             <HeroButton href="/layout3" appendClass="animate-bounceLight">Layout 3</HeroButton>
 
