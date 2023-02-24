@@ -1,7 +1,5 @@
 
 import {getAllCountries} from "@/lib/CountriesService";
-import Link from "next/link";
-import MyButton from "@/components/MyButton"
 import {
   Card,
   CardHeader,

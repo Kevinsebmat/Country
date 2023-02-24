@@ -1,6 +1,5 @@
 
 import {getAllCountries} from "@/lib/CountriesService";
-import Link from "next/link";
 
 
 export async function getServerSideProps (context) {
@@ -12,14 +11,6 @@ export async function getServerSideProps (context) {
 const Country = ({data}) => {
     return (
         <div>
-            <ul className={'flex'}>
-                <li className={'mt-1 px-12 py-3'}>
-                    <Link href={'/'}><h1 className={'text-lg font-bold'}>Home</h1></Link>
-                </li>
-                <li className={'mt-1 px-12 py-3'}>
-                    <Link href={'/countries'}><h1 className={'text-lg font-bold'}>All Countries</h1></Link>
-                </li>
-            </ul>
 
             <ul className={'h-56 grid grid-cols-3 gap-4 content-start'}>
                 <li>Country code: {data.code}</li>
